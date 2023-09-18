@@ -1,6 +1,11 @@
+// Usando template strings com alert
+const nome1 = prompt("Digite seu nome:");
+const cor1 = prompt("Digite sua cor favorita:");
 
-var nomeDoUsuario = prompt("Digite seu nome:");
-var emailDoUsuario = prompt("Digite seu e-mail:");
+alert(`A cor favorita de ${nome1} é ${cor1}`);
 
-// Imprimir a mensagem formatada no console
-alert(`O e-mail ${emailDoUsuario} foi cadastrado com sucesso. Seja bem-vinda(o), ${nomeDoUsuario}!`);
+// Usando concatenação com alert
+const nome2 = prompt("Digite seu nome:");
+const cor2 = prompt("Digite sua cor favorita:");
+
+alert("A cor favorita de " + nome2 + " é " + cor2);

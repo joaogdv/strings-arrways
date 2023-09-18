@@ -1,27 +1,16 @@
-// a) Criar um array vazio e armazená-lo na variável listaDeTarefas
-var listaDeTarefas = [];
+// Array com cinco raças de cachorro
+var racasDeCachorro = ["Labrador Retriever", "Bulldog", "Poodle", "Husky Siberiano", "Golden Retriever"];
 
-// b) Pedir ao usuário 3 tarefas e armazená-las no array
-for (var i = 0; i < 3; i++) {
-    var tarefa = prompt("Digite a tarefa #" + (i + 1) + " que você precisa realizar hoje:");
-    listaDeTarefas.push(tarefa);
-}
+// Solicitar ao usuário um número de 0 a 4
+var numeroEscolhido = prompt("Digite um número de 0 a 4 para escolher uma raça de cachorro:");
 
-// c) Imprimir o array no console
-console.log("Tarefas a serem realizadas:");
-console.log(listaDeTarefas);
+// Converter o número escolhido para um número inteiro
+numeroEscolhido = parseInt(numeroEscolhido);
 
-// d) Pedir ao usuário que digite o índice de uma tarefa realizada
-var indiceRealizada = parseInt(prompt("Digite o índice de uma tarefa que você já realizou (0, 1 ou 2):"));
-
-// e) Remover a tarefa com base no índice fornecido pelo usuário
-if (indiceRealizada >= 0 && indiceRealizada < listaDeTarefas.length) {
-    listaDeTarefas.splice(indiceRealizada, 1);
-    console.log("Tarefa removida.");
+// Verificar se o número escolhido está dentro do intervalo válido
+if (numeroEscolhido >= 0 && numeroEscolhido <= 4) {
+  // Acessar a raça correspondente ao número escolhido e imprimir no console
+  alert("Raça escolhida: " + racasDeCachorro[numeroEscolhido]);
 } else {
-    console.log("Índice inválido. Nenhuma tarefa foi removida.");
+  alert("Número fora do intervalo válido.");
 }
-
-// f) Imprimir o array atualizado no console
-console.log("Tarefas restantes:");
-console.log(listaDeTarefas);
